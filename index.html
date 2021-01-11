@@ -28,11 +28,44 @@
       <h1 class="display-3">Work Day Scheduler</h1>
       <p class="lead">A simple calendar app for scheduling your work day</p>
       <p id="currentDay" class="lead"></p>
+      <p id="today" class="lead"></p>
     </header>
-    <div class="container">
-      <div class="day-box col-lg-12">
-        <button class="btn-lg">YOLO</button>
-        <span>asdfasdfasdf</span>
+    <div class="container col-lg-12">
+      <div class="day-box">
+        <button class="btn-lg days-time">09:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+        <h4 class="user-input"></h4>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">10:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">11:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">12:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">13:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">14:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">15:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">16:00</button>
+        <button class="btn-primary btn-lg saveBtn">Save</button>
+      </div>
+      <div class="day-box">
+        <button class="btn-lg days-time">17:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
       </div>
       <!-- Timeblocks go here -->
@@ -43,6 +76,8 @@
     <script src="./script.js"></script>
     <script>
       $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
+      $("#today").text(moment().format('dddd'));
+      $(".day-box").attr("class", "border-right border-top")
     </script>
   </body>
 </html>
