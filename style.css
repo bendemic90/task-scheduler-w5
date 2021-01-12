@@ -5,7 +5,7 @@ body {
   }
   
   textarea{
-    background: transparent;
+    background: transparent; 
     border: none;
     resize: none;
     color: #000000;
@@ -87,4 +87,9 @@ body {
 
   #today{
     font-size: 40px;
+  }
+
+  h5 {
+    padding-right: 20px;
+    padding-top: 10px;
   }

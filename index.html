@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE html> 
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -30,54 +30,70 @@
       <p id="currentDay" class="lead"></p>
       <p id="today" class="lead"></p>
     </header>
+    <!--all the buttons-->
     <div class="container col-lg-12">
-      <div class="day-box">
-        <button class="btn-lg days-time">09:00</button>
+      <div id="nine-am" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">09:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
-        <h4 class="user-input"></h4>
+        <input id="inputone" type="text" placeholder="Your event!">
+        <!--<h5 class="user-input text-center"></h5>-->
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">10:00</button>
+      <div id="ten-am" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">10:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">11:00</button>
+      <div id="eleven-am" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">11:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">12:00</button>
+      <div id="twelve-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">12:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">13:00</button>
+      <div id="one-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">13:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">14:00</button>
+      <div id="two-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">14:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">15:00</button>
+      <div id="three-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">15:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">16:00</button>
+      <div id="four-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">16:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <div class="day-box">
-        <button class="btn-lg days-time">17:00</button>
+      <div id="five-pm" class="day-box col-lg-12">
+        <button class="btn-lg days-time border-left-0 border-bottom-0">17:00</button>
         <button class="btn-primary btn-lg saveBtn">Save</button>
+        <input type="text" placeholder="Your event!">
       </div>
-      <!-- Timeblocks go here -->
     </div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
     <script>
+      //var input1 = $("#inputone");
+      //var input2 = $("")
       $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
       $("#today").text(moment().format('dddd'));
-      $(".day-box").attr("class", "border-right border-top")
+     // $(".day-box").attr("class", "border-right border-top")
+      $(".saveBtn").on("click", function(){
+         //$("#nine-am").append("<h5 class=\"float-right\">" + input1[0].value + " " + "</h5>")
+          console.log(this);
+      })
+
     </script>
   </body>
 </html>
