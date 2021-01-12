@@ -63,8 +63,8 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-    float: right;
-    clear:both;
+    /*float: right;*/
+   /* clear: both;*/
   }
   
   .saveBtn i:hover {
@@ -73,17 +73,17 @@ body {
   }
   
   .day-box{
-   margin-bottom: 5px;
+   /*margin-bottom: 5px;*/
   }
-  .user-input{
+ /* .user-input{
     float:right;
     margin-right:20px;
-  }
+  }*/
 
-  .container{
+  /*.container{
     padding-left: 60px;
     padding-right: 60px;
-  }
+  }*/
 
   #today{
     font-size: 40px;

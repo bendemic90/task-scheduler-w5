@@ -1,1 +1,1 @@
- var input1 = $("#inputone").textContent
+ //var input1 = $("#inputone").textContent
