@@ -131,10 +131,18 @@
 
       // colours, past present and future
       var now = moment().format('HH');
-      // all grey outside of hours
+      // all dark outside of hours
         if (now < 9 || now > 17) {
-          var allWrong = document.querySelectorAll("input");
-          allWrong.addClass("bg-secondary");
+          input1.addClass("bg-dark");
+          input2.addClass("bg-dark");
+          input3.addClass("bg-dark");
+          input4.addClass("bg-dark");
+          input5.addClass("bg-dark");
+          input6.addClass("bg-dark");
+          input7.addClass("bg-dark");
+          input8.addClass("bg-dark");
+          input9.addClass("bg-dark");
+          
         }
       //
         if (now == 9) {
