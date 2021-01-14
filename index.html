@@ -39,7 +39,6 @@
         <button class="btn-primary col btn-lg s1 saveBtn">Save</button>
         
         </div>
-        <!--<h5 class="user-input text-center"></h5>-->
       </div>
       <div class="row">
       <div id="ten-am" class="day-box d-flex col">
@@ -96,7 +95,7 @@
     <div class="row">
       <div id="five-pm" class="day-box d-flex col">
         <button class="btn-lg days-time col hour border-left-0 border-bottom-0">17:00</button>
-        <input id="inputeight" class="textarea col-10" type="text" placeholder="Your task!">
+        <input id="inputnine" class="textarea col-10" type="text" placeholder="Your task!">
         <button class="btn-primary col btn-lg s9 saveBtn">Save</button>
         </div>
       </div>
@@ -108,9 +107,6 @@
     <script src="./script.js"></script>
     <script>
 
-      // colours, past present and future
-
-      
       //a few cheeky variables
       var input1 = $("#inputone");
       var input2 = $("#inputtwo");
@@ -121,6 +117,7 @@
       var input7 = $("#inputseven");
       var input8 = $("#inputeight");
       var input9 = $("#inputnine");
+
       //local storage pulls
       input1.attr("value", localStorage.getItem("task1"));
       input2.attr("value", localStorage.getItem("task2"));
@@ -132,9 +129,119 @@
       input8.attr("value", localStorage.getItem("task8"));
       input9.attr("value", localStorage.getItem("task9"));
 
+      // colours, past present and future
+      var now = moment().format('HH');
+      // all grey outside of hours
+        if (now < 9 || now > 17) {
+          var allWrong = document.querySelectorAll("input");
+          allWrong.addClass("bg-secondary");
+        }
+      //
+        if (now == 9) {
+          input1.addClass("bg-danger");
+          input2.addClass("bg-success");
+          input3.addClass("bg-success");
+          input4.addClass("bg-success");
+          input5.addClass("bg-success");
+          input6.addClass("bg-success");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 10) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-danger");
+          input3.addClass("bg-success");
+          input4.addClass("bg-success");
+          input5.addClass("bg-success");
+          input6.addClass("bg-success");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 11) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-danger");
+          input4.addClass("bg-success");
+          input5.addClass("bg-success");
+          input6.addClass("bg-success");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 12) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-danger");
+          input5.addClass("bg-success");
+          input6.addClass("bg-success");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 13) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-secondary");
+          input5.addClass("bg-danger");
+          input6.addClass("bg-success");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 14) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-secondary");
+          input5.addClass("bg-secondary");
+          input6.addClass("bg-danger");
+          input7.addClass("bg-success");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 15) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-secondary");
+          input5.addClass("bg-secondary");
+          input6.addClass("bg-secondary");
+          input7.addClass("bg-danger");
+          input8.addClass("bg-success");
+          input9.addClass("bg-success");
+        }
+        if (now == 16) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-secondary");
+          input5.addClass("bg-secondary");
+          input6.addClass("bg-secondary");
+          input7.addClass("bg-secondary");
+          input8.addClass("bg-danger");
+          input9.addClass("bg-success");
+        }
+        if (now == 17) {
+          input1.addClass("bg-secondary");
+          input2.addClass("bg-secondary");
+          input3.addClass("bg-secondary");
+          input4.addClass("bg-secondary");
+          input5.addClass("bg-secondary");
+          input6.addClass("bg-secondary");
+          input7.addClass("bg-secondary");
+          input8.addClass("bg-secondary");
+          input9.addClass("bg-danger");
+        }
+        
+
       //heading text filler (time and day)
       $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
       $("#today").text(moment().format('dddd'));
+
       //many, many button clicks
       $(".s1").on("click", function(){
          localStorage.setItem("task1", input1[0].value);

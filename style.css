@@ -63,8 +63,7 @@ body {
     border-bottom-right-radius: 15px;
     background-color: #06AED5;
     color: white;
-    /*float: right;*/
-   /* clear: both;*/
+
   }
   
   .saveBtn i:hover {
@@ -85,7 +84,7 @@ body {
     padding-right: 60px;
   }*/
 
-  .bg-secondary {
+  /*.bg-secondary {
     opacity: .5;
   }
   
@@ -95,7 +94,8 @@ body {
 
   .bg-success {
     opacity: .5;
-  }
+  }*/
+
   #today{
     font-size: 40px;
   }
