@@ -1,7 +1,6 @@
 # task-scheduler-w5
 A daily task scheduler
 
-
 ## Features
 * Has input fields that are coloured dependent on time of day.
 * Input text will be saved in localStorage, and will persist through refreshes.
