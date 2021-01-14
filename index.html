@@ -107,6 +107,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.24.0/moment.min.js"></script>
     <script src="./script.js"></script>
     <script>
+
+      // colours, past present and future
+
+      
       //a few cheeky variables
       var input1 = $("#inputone");
       var input2 = $("#inputtwo");
@@ -117,36 +121,47 @@
       var input7 = $("#inputseven");
       var input8 = $("#inputeight");
       var input9 = $("#inputnine");
+      //local storage pulls
+      input1.attr("value", localStorage.getItem("task1"));
+      input2.attr("value", localStorage.getItem("task2"));
+      input3.attr("value", localStorage.getItem("task3"));
+      input4.attr("value", localStorage.getItem("task4"));
+      input5.attr("value", localStorage.getItem("task5"));
+      input6.attr("value", localStorage.getItem("task6"));
+      input7.attr("value", localStorage.getItem("task7"));
+      input8.attr("value", localStorage.getItem("task8"));
+      input9.attr("value", localStorage.getItem("task9"));
+
       //heading text filler (time and day)
       $("#currentDay").text(moment().format('MMMM Do YYYY, h:mm:ss a'));
       $("#today").text(moment().format('dddd'));
       //many, many button clicks
       $(".s1").on("click", function(){
-         $("#nine-am").append("<h5 class=\"float-right\">" + input1[0].value + " " + "</h5>")
+         localStorage.setItem("task1", input1[0].value);
       })
       $(".s2").on("click", function(){
-         $("#ten-am").append("<h5 class=\"float-right\">" + input2[0].value + " " + "</h5>")
+        localStorage.setItem("task2", input2[0].value);
       })
       $(".s3").on("click", function(){
-         $("#eleven-am").append("<h5 class=\"float-right\">" + input3[0].value + " " + "</h5>")
+        localStorage.setItem("task3", input3[0].value);
       })
       $(".s4").on("click", function(){
-         $("#twelve-pm").append("<h5 class=\"float-right\">" + input4[0].value + " " + "</h5>")
+        localStorage.setItem("task4", input4[0].value);
       })
       $(".s5").on("click", function(){
-         $("#one-pm").append("<h5 class=\"float-right\">" + input5[0].value + " " + "</h5>")
+        localStorage.setItem("task5", input5[0].value);
       })
       $(".s6").on("click", function(){
-         $("#two-pm").append("<h5 class=\"float-right\">" + input6[0].value + " " + "</h5>")
+        localStorage.setItem("task6", input6[0].value);
       })
       $(".s7").on("click", function(){
-         $("#three-pm").append("<h5 class=\"float-right\">" + input7[0].value + " " + "</h5>")
+        localStorage.setItem("task7", input7[0].value);
       })
       $(".s8").on("click", function(){
-         $("#four-pm").append("<h5 class=\"float-right\">" + input8[0].value + " " + "</h5>")
+        localStorage.setItem("task8", input8[0].value);
       })
       $(".s9").on("click", function(){
-         $("#five-pm").append("<h5 class=\"float-right\">" + input9[0].value + " " + "</h5>")
+        localStorage.setItem("task9", input9[0].value);
       })
 
     </script>

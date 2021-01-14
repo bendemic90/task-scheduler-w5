@@ -85,6 +85,17 @@ body {
     padding-right: 60px;
   }*/
 
+  .bg-secondary {
+    opacity: .5;
+  }
+  
+  .bg-danger {
+    opacity: .5;
+  }
+
+  .bg-success {
+    opacity: .5;
+  }
   #today{
     font-size: 40px;
   }
